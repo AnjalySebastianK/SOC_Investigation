@@ -9,6 +9,8 @@
 - **User Account:** monica@letsdefend.io  
 - **Affected Host:** Monica (Windows 10, IP: 172.16.17.163)
 
+![Incident Summary](1.png)
+
 ---
 
 ## 1.2 Alerts, Logs, and Evidence
@@ -80,8 +82,14 @@ Public-facing VPN login page over **HTTPS (port 443)**.
 
 ---
 
-## 1.6 Screenshots (Placeholders)
-
+## 1.6 Screenshots
+![Virus Total](2.png)
+![Whoami](3.png)
+![OTP Attempt](4.png)
+![Raw Log](5.png)
+![Email Security](6.png)
+![Email](7.png)
+![Threat Intel](8.png)
 
 ---
 
