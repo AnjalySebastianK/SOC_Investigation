@@ -10,6 +10,8 @@
 - **Protocol:** RDP (3389)  
 - **Firewall Action:** Allowed  
 
+![Incident 4 – Alert Details](1.png)
+
 ---
 
 ## 4.2 Alerts, Logs, and Evidence
@@ -107,12 +109,13 @@ RDP service exposed to the internet on **port 3389**.
 
 ## 4.6 Screenshots (Placeholders)
 
-![Incident 4 – Alert Details](images/incident4-alert.png)
-![Incident 4 – Failed Logins](images/incident4-failed-logins.png)
-![Incident 4 – Successful Login](images/incident4-successful-login.png)
-![Incident 4 – Terminal History](images/incident4-terminal-history.png)
-![Incident 4 – Network Activity](images/incident4-network.png)
-![Incident 4 – Threat Intel](images/incident4-threatintel.png)
+![Incident 4 – Virus Total](2.png)
+![Incident 4 – Logs](3.png)
+![Incident 4 – Failed Login](4.png)
+![Incident 4 – Successful Login](5.png)
+![Incident 4 – Terminal History](6.png)
+![Incident 4 – Network Activity](7.png)
+![Incident 4 – Closed](8.png)
 
 ## 4.7 Detailed Investigation Notes
 ### Timeline
