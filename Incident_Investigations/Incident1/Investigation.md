@@ -84,11 +84,17 @@ Public-facing VPN login page over **HTTPS (port 443)**.
 
 ## 1.6 Screenshots
 ![Virus Total](2.png)
+
 ![Whoami](3.png)
+
 ![OTP Attempt](4.png)
+
 ![Raw Log](5.png)
+
 ![Email Security](6.png)
+
 ![Email](7.png)
+
 ![Threat Intel](8.png)
 
 ---
