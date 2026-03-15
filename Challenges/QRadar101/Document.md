@@ -1,225 +1,114 @@
-cat << 'EOF' > QRadar101_README.md
-# IBM QRadar 101 Challenge Report
+# QRadar 101 Challenge
 
-## Challenge Overview
+## Objective
+The **QRadar 101 Challenge** introduced the fundamentals of **Security Information and Event Management (SIEM)** using IBM QRadar. The goal of this exercise was to understand how SOC analysts monitor networks, investigate suspicious activity, and correlate events from multiple log sources to identify security incidents.
 
-The **QRadar 101 Challenge** is designed to introduce the fundamentals of **Security Information and Event Management (SIEM)** using IBM QRadar. In this challenge, security analysts investigate suspicious activity within an organization's network by analyzing logs collected from multiple sources.
-
-IBM QRadar collects and correlates logs from different systems such as servers, intrusion detection systems, and network devices. These logs allow analysts to detect suspicious activities, investigate potential security incidents, and understand attacker behavior.
-
-This challenge simulates a real-world **SOC (Security Operations Center)** investigation scenario where analysts must identify compromised systems, attacker tools, and malicious activities.
+This challenge focused on analyzing logs collected from different systems within an organization and reconstructing attacker activity across the network.
 
 ---
 
-# Objectives
+# Investigation Overview
 
-The objectives of this challenge were to:
+During the investigation, security logs were analyzed using the QRadar platform to identify suspicious activity and trace the actions of an attacker within the network.
 
-- Learn the basics of the **IBM QRadar SIEM platform**
-- Understand how logs are collected and analyzed
-- Perform **event correlation and log analysis**
-- Investigate suspicious activities in the network
-- Identify attacker techniques and compromised systems
-- Record findings and document the investigation process
+The analysis revealed several key findings:
 
----
-
-# Step-by-Step Methodology
-
-## Step 1: Exploring the QRadar Interface
-
-The investigation began by accessing the QRadar dashboard and familiarizing with its main components.
-
-Important sections include:
-
-- Log Activity
-- Network Activity
-- Offenses
-- Rules
-- Admin
-
-These components allow SOC analysts to monitor network events, investigate alerts, and detect security incidents.
+- Total log sources monitored by the SIEM: **15**
+- Network IDS used for monitoring: **Suricata**
+- Organization domain identified: **hackdefend.local**
+- Attacker IP address: **192.20.80.25**
+- First infected machine: **192.168.10.15**
+- Compromised user account: **nour**
+- The attacker initially gained access through a malicious document: **important_instructions.docx**
+- The MD5 hash of the malicious file was: **9D08221599FCD9D35D11F9CBD6A0DEA3**
 
 ---
 
-## Step 2: Reviewing Log Sources
+# Attacker Techniques Identified
 
-The first step of the investigation involved identifying the **log sources connected to the SIEM system**.
+### Persistence
+The attacker used a persistence technique mapped to the MITRE ATT&CK framework: **T1547.001**
 
-Navigation Path:
-
-Admin → Log Sources
-
-Total log sources identified:
-
-15
-
-Screenshot:
-
-![Log Sources](screenshots/qradar_q1.png)
+This technique allows malicious programs to maintain persistence during system startup.
 
 ---
 
-## Step 3: Identifying the Network Monitoring System
+### Lateral Movement
+After compromising the first machine, the attacker moved laterally through the network using:**wmiexec.py**
 
-During log analysis, an intrusion detection system was identified that monitors network traffic.
-
-IDS Software:
-
-Suricata
-
-Suricata generates alerts when suspicious network activity or known attack signatures are detected.
-
-Screenshot:
-
-![IDS Detection](screenshots/qradar_q2.png)
+This tool is part of the **Impacket toolkit** and allows attackers to execute commands remotely on other systems.
 
 ---
 
-## Step 4: Identifying the Network Domain
-
-Authentication logs revealed the internal domain used by the organization.
-
-Domain Name:
-
-hackdefend.local
-
-Screenshot:
-
-![Domain](screenshots/qradar_q3.png)
+### Data Exfiltration
+The attacker used the following tool to exfiltrate data from the compromised system: **curl**
 
 ---
 
-## Step 5: Investigating Suspicious Network Communication
+# Key Concepts Learned
 
-Further analysis showed that multiple systems were communicating with a suspicious server.
+### SIEM Monitoring
+IBM QRadar collects logs from multiple systems including servers, network devices, and security tools to monitor the network for suspicious activity.
 
-Suspicious IP address identified:
+### Event Correlation
+QRadar correlates multiple security events from different log sources to identify potential threats.
 
-192.168.20.20
+### Log Analysis
+Security logs are analyzed to detect anomalies such as unauthorized access, malware execution, or suspicious network communication.
 
-This indicated potential malware activity or compromised hosts within the network.
+### Rule Creation
+Custom detection rules can be created to trigger alerts based on suspicious patterns.
 
----
+Example detection scenarios include:
 
-## Step 6: Identifying the Attacker
-
-Through event correlation and log investigation, the attacker’s IP address was identified.
-
-Attacker IP:
-
-192.20.80.25
-
----
-
-## Step 7: Identifying the First Infected Machine
-
-The investigation revealed the first compromised machine in the network.
-
-First infected host:
-
-192.168.10.15
-
-Associated user account:
-
-nour
+- Multiple failed login attempts
+- Suspicious external IP communication
+- Malware execution alerts
+- Data exfiltration attempts
 
 ---
 
-## Step 8: Investigating Malware Activity
-
-The attacker initially infected the system using a malicious document.
-
-Malicious file:
-
-important_instructions.docx
-
-MD5 hash of the file:
-
-9D08221599FCD9D35D11F9CBD6A0DEA3
-
----
-
-## Step 9: Identifying Persistence Technique
-
-The attacker used a persistence technique mapped to the MITRE ATT&CK framework.
-
-MITRE Technique ID:
-
-T1547.001
-
-This technique allows attackers to maintain persistence through system startup mechanisms.
-
----
-
-## Step 10: Lateral Movement Detection
-
-Logs revealed that the attacker moved laterally across systems using the following tool:
-
-wmiexec.py
-
-This tool allows attackers to execute commands remotely on other machines in the network.
-
----
-
-## Step 11: Data Exfiltration Activity
-
-The attacker used the following tool to exfiltrate sensitive data from the network.
-
-Data exfiltration tool:
-
-curl
-
----
-
-# Summary of Key Findings
+# Key Findings
 
 | Indicator | Value |
 |------|------|
 | Log Sources | 15 |
-| IDS System | Suricata |
-| Domain Name | hackdefend.local |
+| IDS Software | Suricata |
+| Domain | hackdefend.local |
 | Attacker IP | 192.20.80.25 |
-| First Infected Machine | 192.168.10.15 |
+| First Infected Host | 192.168.10.15 |
 | Compromised User | nour |
 | Lateral Movement Tool | wmiexec.py |
 | Data Exfiltration Tool | curl |
-| Malicious File | important_instructions.docx |
 
 ---
 
-# Key Learnings
+# Skills Developed
 
-This challenge helped develop several important cybersecurity skills:
-
-### SIEM Log Analysis
-Understanding how security logs are collected and analyzed using IBM QRadar.
-
-### Event Correlation
-Learning how different events across multiple systems can be correlated to identify suspicious activity.
-
-### Threat Investigation
-Investigating attacker behavior by analyzing authentication logs, network activity, and system events.
-
-### Incident Response Skills
-Reconstructing the attack timeline and identifying compromised systems within the network.
-
----
-
-# Conclusion
-
-The QRadar 101 Challenge provided practical experience in investigating cyber incidents using a SIEM platform. By analyzing logs from multiple sources, it was possible to identify the attacker, detect compromised systems, and understand how the attacker moved within the network.
-
-This exercise demonstrates how SIEM tools like **IBM QRadar** help SOC analysts monitor network activity, detect threats, and respond to security incidents effectively.
+- SIEM log analysis
+- Event correlation investigation
+- Threat detection using QRadar
+- Identifying attacker tactics and techniques
+- Investigating compromised systems
+- SOC incident investigation
 
 ---
 
 # Tools Used
 
 | Tool | Purpose |
-|------|------|
-| IBM QRadar | SIEM log analysis |
+|----|----|
+| IBM QRadar | SIEM monitoring and log analysis |
 | Suricata IDS | Network intrusion detection |
 | Windows Event Logs | System activity monitoring |
+| SIEM Event Correlation | Threat detection |
 
-EOF
+---
+
+# Conclusion
+
+The QRadar 101 challenge provided hands-on experience in using a SIEM platform to investigate a cybersecurity incident. By analyzing logs from multiple sources, it was possible to identify the attacker, detect compromised systems, and understand how the attacker moved within the network.
+
+This exercise demonstrates the importance of SIEM tools in modern **Security Operations Centers (SOC)** for detecting threats, correlating events, and responding to cyber attacks.
+
+---
