@@ -80,7 +80,7 @@ Email delivered via **SMTP from external IP 27.128.173.81**.
 
 ---
 
-## 2.6 Screenshots (Placeholders)
+## 2.6 Screenshots
 
 
 ![Incident 2 – Email Content](5.png)
