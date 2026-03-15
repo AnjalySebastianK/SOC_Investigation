@@ -10,6 +10,8 @@
 - **Sender:** hahaha@ihackedyourcomputer.com  
 - **SMTP Source IP:** 27.128.173.81  
 
+![Incident 2 – Alert Details](1.png)
+
 ---
 
 ## 2.2 Alerts, Logs, and Evidence
@@ -80,10 +82,10 @@ Email delivered via **SMTP from external IP 27.128.173.81**.
 
 ## 2.6 Screenshots (Placeholders)
 
-![Incident 2 – Alert Details](images/incident2-alert.png)
-![Incident 2 – Email Content](images/incident2-email.png)
-![Incident 2 – SMTP Log](images/incident2-smtp-log.png)
-![Incident 2 – Threat Intel Lookup](images/incident2-threatintel.png)
+
+![Incident 2 – Email Content](5.png)
+![Incident 2 – Log](4.png)
+![Incident 2 – Closed](7.png)
 
 ---
 ## 2.7 Detailed Investigation Notes
