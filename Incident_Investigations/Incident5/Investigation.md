@@ -1,6 +1,6 @@
-# Incident 6 — SOC153: Suspicious PowerShell Script Execution & Malicious Remote Command
+# Incident 5 — SOC153: Suspicious PowerShell Script Execution & Malicious Remote Command
 
-## 1.1 Incident Summary
+## 5.1 Incident Summary
 - **Incident Name/ID:** SOC153 – Suspicious PowerShell Script Executed
 - **Event ID:** 238
 - **Severity:** Medium
@@ -11,7 +11,7 @@
 
 ---
 
-## 1.2 Alerts, Logs, and Evidence
+## 5.2 Alerts, Logs, and Evidence
 
 ### Alert Details
 - Alert triggered due to execution of a **suspicious PowerShell script** (`payload_1.ps1`).
@@ -63,7 +63,7 @@ Indicates **download + execute** behavior (classic malware technique).
 
 ---
 
-## 1.3 Indicators of Compromise (IOCs)
+## 5.3 Indicators of Compromise (IOCs)
 
 | Type | Value |
 |------|-------|
@@ -76,7 +76,7 @@ Indicates **download + execute** behavior (classic malware technique).
 
 ---
 
-## 1.4 Root Cause, Attack Vector, and Impact
+## 5.4 Root Cause, Attack Vector, and Impact
 
 ### Root Cause
 Execution of a **malicious PowerShell script** downloaded from an external, untrusted source.
@@ -94,7 +94,7 @@ Execution of a **malicious PowerShell script** downloaded from an external, untr
 
 ---
 
-## 1.5 Tools and Techniques Used
+## 5.5 Tools and Techniques Used
 - SIEM Monitoring Dashboard
 - Process Creation Logs (EventID 1)
 - PowerShell Operational Logs (EventID 4104)
@@ -106,13 +106,13 @@ Execution of a **malicious PowerShell script** downloaded from an external, untr
 
 ---
 
-## 1.6 Screenshots (Placeholders)
+## 5.6 Screenshots
 
 > Replace these with your actual screenshot paths in your GitHub repo.
 
 ---
 
-## 1.7 Detailed Investigation Notes
+## 5.7 Detailed Investigation Notes
 
 ### Timeline
 - **16:40 PM** — User accessed benign Windows article.
@@ -128,7 +128,7 @@ Execution of a **malicious PowerShell script** downloaded from an external, untr
 - No evidence of lateral movement yet.
 - Early detection prevented deeper compromise.
 
-### Conclusion
+### 5.8 Conclusion
 This was a **true positive malware incident** involving malicious PowerShell execution and remote command activity.  
 The attack chain was interrupted early, preventing further payload execution or data exfiltration.  
 Recommend blocking associated domains, reinforcing user awareness, and monitoring the host for persistence attempts.
