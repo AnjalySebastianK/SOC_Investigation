@@ -11,6 +11,8 @@
 - **SMTP Source IP:** 158.69.201.47  
 - **Device Action:** Allowed (email reached inbox)  
 
+![Incident 3 – Alert Details](1.png)
+
 ---
 
 ## 3.2 Alerts, Logs, and Evidence
@@ -99,15 +101,14 @@ QR code embedded in an email impersonating an MFA security update.
 
 ---
 
-## 3.6 Screenshots (Placeholders)
+## 3.6 Screenshots
 
-![Incident 3 – Alert Details](images/incident3-alert.png)
-![Incident 3 – Email Content](images/incident3-email.png)
-![Incident 3 – QR Code](images/incident3-qrcode.png)
-![Incident 3 – QR Code Decoded](images/incident3-cyberchef.png)
-![Incident 3 – URL Reputation](images/incident3-url-reputation.png)
-![Incident 3 – Threat Intel](images/incident3-threatintel.png)
-![Incident 3 – Host Isolation](images/incident3-host-isolation.png)
+
+![Incident 3 – Email Content](5.png)
+![Incident 3 – QR Code Decoded](6.png)
+![Incident 3 – URL Reputation](7.png)
+![Incident 3 – Threat Intel](9.png)
+![Incident 3 – Closed](10.png)
 
 ---
 ## 3.7 Detailed Investigation Notes
