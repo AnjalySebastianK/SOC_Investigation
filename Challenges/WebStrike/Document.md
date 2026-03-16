@@ -28,7 +28,7 @@ The investigation started by opening the `WebStrike.pcap` file in Wireshark and 
 - Suspicious traffic originated from IP: 117.11.88.124
 - Target web server: 24.49.63.79
 
-![Wireshark Traffic](screenshots/traffic.png)
+![Wireshark Traffic](screenshots/1.png)
 
 ---
 
@@ -45,7 +45,7 @@ This revealed requests to the vulnerable web application:GET /
 - GET /reviews/
 - POST /reviews/upload.php
 
-![HTTP Filter](screenshots/http_filter.png)
+![HTTP Filter](screenshots/2.png)
 
 ---
 
@@ -57,8 +57,6 @@ Examining HTTP request headers revealed the attacker’s User-Agent.
 
 `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
 
-
-![User Agent](screenshots/useragent.png)
 
 ---
 
@@ -79,7 +77,7 @@ The attacker uploaded a malicious PHP file disguised as an image.
 ### Malicious Filename
 `image.jpg.php`
 
-![POST Request](screenshots/post_upload.png)
+![POST Request](screenshots/3.png)
 
 ---
 
@@ -103,7 +101,7 @@ The payload performs the following actions:
 ### Target Port 
 8080
 
-![Reverse Shell](screenshots/payload.png)
+![Reverse Shell](screenshots/4.png)
 
 ---
 
@@ -126,7 +124,7 @@ Commands executed by the attacker:
 - ls /home
 - cat /etc/passwd
 
-![Shell Access](screenshots/shell_access.png)
+![Shell Access](screenshots/5.png)
 
 ---
 
