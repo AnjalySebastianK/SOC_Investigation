@@ -132,19 +132,6 @@ No internal systems were accessed and the user account remains uncompromised.
 
 ---
 
-## 6. Screenshots
-
-*(Reference to screenshots stored in the repository for this incident.)*
-
-- Incident summary view  
-- VirusTotal IP reputation result  
-- OTP attempt logs  
-- Raw VPN / firewall logs  
-- Email security logs  
-- Threat intelligence lookup
-
----
-
 ## 7. Timeline
 
 - **02:01 AM** — MFA activation email triggered.  
@@ -161,4 +148,3 @@ No internal systems were accessed and the user account remains uncompromised.
 - **MFA effectively prevented account takeover**, even with valid username knowledge.  
 - No lateral movement or endpoint compromise observed.
 
-EOF
