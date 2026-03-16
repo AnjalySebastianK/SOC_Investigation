@@ -53,7 +53,7 @@ Examining HTTP request headers revealed the attacker’s User-Agent.
 
 `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
 
-![Image](7.png)
+![Image](screenshots/7.png)
 
 ---
 
@@ -63,7 +63,7 @@ Examining HTTP request headers revealed the attacker’s User-Agent.
 - The target server IP was: `24.49.63.79`
 - Using an external IP geolocation service, the attacker’s location was identified as: `Tianjin, China`
 
-![Image](6.png)
+![Image](screenshots/6.png)
 
 ---
 
@@ -83,7 +83,7 @@ Further analysis of the HTTP stream revealed a malicious file upload attempt.
 
 The uploaded file name was: `image.jpg.php`
 
-![Image](8.png)
+![Image](screenshots/8.png)
 
 Although the file appeared to be an image, it actually contained **PHP code**, indicating an attempt to bypass file upload restrictions.
 
@@ -115,7 +115,7 @@ This payload performs the following actions:
 
 The reverse shell payload attempts to connect back to the attacker using **Netcat** on port: `8080`
 
-![Image](9.png)
+![Image](screenshots/9.png)
 
 This allows the attacker to establish a command shell on the compromised system.
 
@@ -133,7 +133,7 @@ Observed commands included:
 - ls /home
 - cat /etc/passwd
 
-![Image](10.png)
+![Image](screenshots/10.png)
 
 These commands indicate **system reconnaissance and an attempt to access sensitive system files**.
 
@@ -171,7 +171,7 @@ The system did not properly validate file types or restrict executable file uplo
 
 Uploaded files were stored in a publicly accessible directory: `/reviews/uploads/`
 
-![Image](11.png)
+![Image](screenshots/11.png)
 
 ## Lack of Web Application Security Controls
 
