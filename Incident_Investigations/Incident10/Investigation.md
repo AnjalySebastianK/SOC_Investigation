@@ -9,6 +9,8 @@
 - **User Account:** N/A  
 - **Affected Host:** WebServer1006 (IP: 172.16.17.13)
 
+![Incident 10 ](1.png)
+
 ---
 
 ## 10.2 Alerts, Logs, and Evidence
@@ -120,16 +122,11 @@ The following tools and systems were used during the investigation:
 
 ---
 
-## 10.6 Screenshots (Placeholders)
+## 10.6 Screenshots 
 
-Insert screenshots for:
-
-- SOC170 alert details
-- HTTP request logs
-- Requested URL containing `/etc/passwd`
-- Firewall connection logs
-- Threat intelligence lookup
-- Log analysis showing HTTP 500 response
+![Incident 10 ](2.png)
+![Incident 10 ](3.png)
+![Incident 10 ](4.png)
 
 ---
 
