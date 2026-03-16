@@ -9,6 +9,8 @@
 - **User Account:** Victor  
 - **Affected Host:** Victor (Windows 10, IP: 172.16.17.207)
 
+![Incident 6 ](1.png)
+
 ---
 
 ## 1.2 Alerts, Logs, and Evidence
@@ -123,17 +125,20 @@ The attack was initiated through **external RDP brute-force attempts**, which al
 
 ---
 
-## 1.6 Screenshots (Placeholders)
+## 1.6 Screenshots 
 
-Insert screenshots for:
-
-- Alert Details (SOC335 Detection)
-- Process Execution Details
-- Threat Intelligence (VirusTotal detection)
-- Firewall RDP Logs
-- Authentication Logs (Event ID 4624 & 4625)
-- Terminal History Commands
-- Endpoint Security Dashboard
+![Incident 6 ](2.png)
+![Incident 6 ](3.png)
+![Incident 6 ](4.png)
+![Incident 6 ](5.png)
+![Incident 6 ](6.png)
+![Incident 6 ](7.png)
+![Incident 6 ](8.png)
+![Incident 6 ](9.png)
+![Incident 6 ](10.png)
+![Incident 6 ](11.png)
+![Incident 6 ](12.png)
+![Incident 6 ](13.png)
 
 ---
 
