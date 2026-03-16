@@ -9,6 +9,8 @@
 - **User Account:** emily@letsdefend.io  
 - **Affected Host:** Emily (Windows 10, Internal IP: 172.16.17.159)
 
+![Incident 9 ](1.png)
+
 ---
 
 ## 9.2 Alerts, Logs, and Evidence
@@ -130,15 +132,13 @@ During the investigation, the following tools and modules were used:
 
 ## 9.6 Screenshots (Placeholders)
 
-Insert screenshots for:
-
-- SOC101 alert details
-- Email message content
-- SMTP email log
-- Browser history showing shortened URL
-- Proxy log showing malicious download
-- Suspicious command execution
-- Endpoint investigation dashboard
+![Incident 9 ](2.png)
+![Incident 9 ](3.png)
+![Incident 9 ](4.png)
+![Incident 9 ](5.png)
+![Incident 9 ](6.png)
+![Incident 9 ](7.png)
+![Incident 9 ](8.png)
 
 ---
 
