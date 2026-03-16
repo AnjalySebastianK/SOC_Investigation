@@ -30,7 +30,7 @@ The investigation began by opening the provided **WebStrike.pcap** file in Wires
 
 ### Screenshot
 
-![Wireshark Overview](screenshots/wireshark_overview.png)
+![Wireshark Overview](screenshots/1.png)
 
 ---
 
@@ -45,7 +45,15 @@ Since the suspected attack involved a web application, HTTP traffic was filtered
 - POST /reviews/upload.php
 
 
-![HTTP Traffic](screenshots/http_filter.png)
+![HTTP Traffic](screenshots/2.png)
+
+Examining HTTP request headers revealed the attacker’s User-Agent.
+
+### User-Agent
+
+`Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
+
+![Image](7.png)
 
 ---
 
@@ -55,6 +63,8 @@ Since the suspected attack involved a web application, HTTP traffic was filtered
 - The target server IP was: `24.49.63.79`
 - Using an external IP geolocation service, the attacker’s location was identified as: `Tianjin, China`
 
+![Image](6.png)
+
 ---
 
 ## Step 4: Detecting Suspicious File Upload Requests
@@ -63,7 +73,7 @@ Since the suspected attack involved a web application, HTTP traffic was filtered
 - This revealed suspicious POST requests targeting the following endpoint: /reviews/upload.php
 - This endpoint allowed users to upload files to the server.
 
-![POST Request](screenshots/post_request.png)
+![POST Request](screenshots/3.png)
 
 ---
 
@@ -73,10 +83,14 @@ Further analysis of the HTTP stream revealed a malicious file upload attempt.
 
 The uploaded file name was: `image.jpg.php`
 
+![Image](8.png)
+
 Although the file appeared to be an image, it actually contained **PHP code**, indicating an attempt to bypass file upload restrictions.
 
 
-![File Upload](screenshots/file_upload.png)
+![File Upload](screenshots/4.png)
+
+
 
 ---
 
@@ -93,13 +107,15 @@ This payload performs the following actions:
 3. Establishes a connection to the attacker
 4. Provides the attacker with remote command execution capability
 
-![Payload](screenshots/payload.png)
+![Payload](screenshots/4.png)
 
 ---
 
 ## Step 7: Identifying Reverse Shell Communication
 
 The reverse shell payload attempts to connect back to the attacker using **Netcat** on port: `8080`
+
+![Image](9.png)
 
 This allows the attacker to establish a command shell on the compromised system.
 
@@ -117,12 +133,13 @@ Observed commands included:
 - ls /home
 - cat /etc/passwd
 
+![Image](10.png)
 
 These commands indicate **system reconnaissance and an attempt to access sensitive system files**.
 
 ### Screenshot
 
-![Shell Access](screenshots/tcp_stream.png)
+![Shell Access](screenshots/5.png)
 
 ---
 
@@ -154,6 +171,7 @@ The system did not properly validate file types or restrict executable file uplo
 
 Uploaded files were stored in a publicly accessible directory: `/reviews/uploads/`
 
+![Image](11.png)
 
 ## Lack of Web Application Security Controls
 
