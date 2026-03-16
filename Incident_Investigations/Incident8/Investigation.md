@@ -9,6 +9,8 @@
 - **User Account:** mane@letsdefend.io  
 - **Affected Host:** Mane (Windows 10, IP: 172.16.17.210)
 
+![Incident 8 ](1.png)
+
 ---
 
 ## 8.2 Alerts, Logs, and Evidence
@@ -136,15 +138,15 @@ During the investigation, the following tools and modules were used:
 
 ## 8.6 Screenshots 
 
-Insert screenshots for:
+![Incident 8 ](2.png)
+![Incident 8 ](3.png)
+![Incident 8 ](4.png)
+![Incident 8 ](5.png)
+![Incident 8 ](6.png)
+![Incident 8 ](7.png)
+![Incident 8 ](8.png)
+![Incident 8 ](9.png)
 
-- SOC210 alert details
-- Authentication logs showing failed logins
-- Successful login event
-- Firewall connection logs
-- Threat intelligence lookup for IP
-- AbuseIPDB report
-- Endpoint security information
 
 ---
 
