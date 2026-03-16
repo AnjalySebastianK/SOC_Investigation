@@ -28,7 +28,7 @@ The investigation started by opening the `WebStrike.pcap` file in Wireshark and 
 - Suspicious traffic originated from IP: 117.11.88.124
 - Target web server: 24.49.63.79
 
-![Wireshark Traffic](screenshots/1.png)
+![Wireshark Traffic](11/1.png)
 
 ---
 
@@ -45,7 +45,7 @@ This revealed requests to the vulnerable web application:GET /
 - GET /reviews/
 - POST /reviews/upload.php
 
-![HTTP Filter](screenshots/2.png)
+![HTTP Filter](11/2.png)
 
 ---
 
@@ -77,7 +77,7 @@ The attacker uploaded a malicious PHP file disguised as an image.
 ### Malicious Filename
 `image.jpg.php`
 
-![POST Request](screenshots/3.png)
+![POST Request](11/3.png)
 
 ---
 
@@ -101,7 +101,7 @@ The payload performs the following actions:
 ### Target Port 
 8080
 
-![Reverse Shell](screenshots/4.png)
+![Reverse Shell](11/4.png)
 
 ---
 
@@ -124,7 +124,7 @@ Commands executed by the attacker:
 - ls /home
 - cat /etc/passwd
 
-![Shell Access](screenshots/5.png)
+![Shell Access](11/5.png)
 
 ---
 
