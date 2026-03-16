@@ -9,6 +9,8 @@
 - **User Account:** LetsDefend
 - **Affected Host:** Tony (Windows, IP: 172.16.17.206)
 
+![Incident 5 – Alert](1.png)
+
 ---
 
 ## 5.2 Alerts, Logs, and Evidence
@@ -108,7 +110,15 @@ Execution of a **malicious PowerShell script** downloaded from an external, untr
 
 ## 5.6 Screenshots
 
-> Replace these with your actual screenshot paths in your GitHub repo.
+
+![Incident 5 – Log](3.png)
+![Incident 5 – Raw Log](4.png)
+![Incident 5 – History](5.png)
+![Incident 5 – Virus Total](6.png)
+![Incident 5 – Event](7.png)
+![Incident 5 – Virus Total hash](2.png)
+![Incident 5 – Upload](8.png)
+![Incident 5 – Closed](9.png)
 
 ---
 
