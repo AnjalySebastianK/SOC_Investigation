@@ -26,7 +26,7 @@
 
 **Endpoint Security Logs**
 - Suspicious process execution detected:
-- Process Name: **svchost.exe**
+- Process Name: **svohost.exe**
 - Process ID: **7640**
 - Parent Process: **powershell.exe**
 - Path: `C:\temp\service_installer\svohost.exe`
