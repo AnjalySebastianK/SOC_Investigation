@@ -10,6 +10,8 @@
 - **Host IP:** 172.16.17.198  
 - **Operating System:** Windows 10  
 
+![Incident 7 ](1.png)
+
 ---
 
 ## 7.2 Alerts, Logs, and Evidence
@@ -89,13 +91,18 @@ Email attachment → ZIP → DOCM → macro execution.
 
 ---
 
-## 7.6 Screenshots (Placeholders)
+## 7.6 Screenshots
+
+![Incident 7 ](2.png)
+![Incident 7 ](3.png)
+![Incident 7 ](4.png)
+![Incident 7 ](5.png)
+![Incident 7 ](6.png)
+![Incident 7 ](7.png)
+![Incident 7 ](8.png)
+![Incident 7 ](9.png)
 
 
-![Incident 5 – Email Details](images/incident5-email.png)
-![Incident 5 – File Creation Log](images/incident5-file-created.png)
-![Incident 5 – Macro Execution Alert](images/incident5-macro-alert.png)
-![Incident 5 – VirusTotal Results](images/incident5-virustotal.png)
 
 ---
 
